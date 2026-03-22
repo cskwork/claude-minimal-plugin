@@ -19,7 +19,7 @@ echo ""
 mkdir -p "$CLAUDE_DIR/skills" "$CLAUDE_DIR/agents" "$CLAUDE_DIR/commands"
 
 # --- Install skills ---
-echo "[1/4] Skills..."
+echo "[1/5] Skills..."
 count=0
 for skill_dir in "$REPO_ROOT/skills"/*/; do
   [ -d "$skill_dir" ] || continue
@@ -30,7 +30,7 @@ done
 echo "  $count skills installed"
 
 # --- Install agents ---
-echo "[2/4] Agents..."
+echo "[2/5] Agents..."
 count=0
 for agent in "$REPO_ROOT/agents"/*.md; do
   [ -f "$agent" ] || continue
@@ -41,7 +41,7 @@ done
 echo "  $count agents installed"
 
 # --- Install commands ---
-echo "[3/4] Commands..."
+echo "[3/5] Commands..."
 count=0
 for cmd in "$REPO_ROOT/commands"/*.md; do
   [ -f "$cmd" ] || continue
@@ -52,13 +52,22 @@ done
 echo "  $count commands installed"
 
 # --- CLAUDE.md setup ---
-echo "[4/4] CLAUDE.md..."
+echo "[4/5] CLAUDE.md..."
 if [ -f "$CLAUDE_DIR/CLAUDE.md" ]; then
   cp "$CLAUDE_DIR/CLAUDE.md" "$CLAUDE_DIR/CLAUDE.md.bak"
   echo "  Existing CLAUDE.md backed up to CLAUDE.md.bak"
 fi
 cp "$REPO_ROOT/CLAUDE.md" "$CLAUDE_DIR/CLAUDE.md"
 echo "  CLAUDE.md installed"
+
+# --- settings.json setup ---
+echo "[5/5] settings.json..."
+if [ -f "$CLAUDE_DIR/settings.json" ]; then
+  cp "$CLAUDE_DIR/settings.json" "$CLAUDE_DIR/settings.json.bak"
+  echo "  Existing settings.json backed up to settings.json.bak"
+fi
+cp "$REPO_ROOT/settings.json" "$CLAUDE_DIR/settings.json"
+echo "  settings.json installed"
 
 echo ""
 echo "Done. Restart Claude Code to apply changes."

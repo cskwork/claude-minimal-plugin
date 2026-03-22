@@ -1,29 +1,58 @@
 {
-  "security": {
-    "folderTrust": {
-      "enabled": true
-    },
-    "auth": {
-      "selectedType": "oauth-personal"
-    }
-  },
-  "tools": {
-    "autoAccept": true,
-    "exclude": [
-      "run_shell_command(rm)",
-      "run_shell_command(rm -rf)",
-      "run_shell_command(sudo)",
-      "run_shell_command(chmod)",
-      "run_shell_command(chown)",
-      "run_shell_command(mv)",
-      "run_shell_command(del)",
-      "run_shell_command(rmdir)",
-      "run_shell_command(sed -i)",
-      "run_shell_command(cat secure)",
-      "run_shell_command(cat */secure/*)",
-      "ReadFileTool(secure)",
-      "ReadFileTool(**/secure/*)"
-    ]
+  "includeCoAuthoredBy": false,
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "WebFetch",
+      "WebSearch",
+      "Task",
+      "Skill",
+      "Agent",
+      "Notebook",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs"
+    ],
+    "deny": [
+      "Bash(rm:*)",
+      "Bash(rm -rf:*)",
+      "Bash(sudo:*)",
+      "Bash(chmod 777:*)",
+      "Bash(chown:*)",
+      "Bash(dd:*)",
+      "Bash(mkfs:*)",
+      "Bash(kill:*)",
+      "Bash(killall:*)",
+      "Bash(del:*)",
+      "Bash(del /f /s /q:*)",
+      "Bash(rmdir /s /q:*)",
+      "Bash(format:*)",
+      "Bash(diskpart:*)",
+      "Bash(shutdown:*)",
+      "Bash(reboot:*)",
+      "Bash(Remove-Item:*)",
+      "Bash(Stop-Process:*)",
+      "Bash(Stop-Computer:*)",
+      "Bash(Restart-Computer:*)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(**/application.yml)",
+      "Read(**/application-*.yml)",
+      "Bash(cat *.env)",
+      "Bash(cat */.env)",
+      "Bash(cat **/.env)",
+      "Bash(type *.env)",
+      "Bash(type */.env)",
+      "Bash(Get-Content *.env)",
+      "Bash(Get-Content */.env)"
+    ],
+    "defaultMode": "auto"
   },
   "mcpServers": {
     "context7": {
@@ -32,6 +61,20 @@
         "Accept": "application/json, text/event-stream"
       }
     }
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "WebSearch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python -c \"import json, sys, re; from datetime import datetime; input_data = json.load(sys.stdin); tool_input = input_data.get('tool_input', {}); query = tool_input.get('query', ''); current_year = str(datetime.now().year); has_year = re.search(r'\\\\b20\\\\d{2}\\\\b', query); has_temporal = any(word in query.lower() for word in ['latest', 'recent', 'current', 'new', 'now', 'today']); should_add_year = not has_year and not has_temporal; modified_query = f'{query} {current_year}' if should_add_year else query; output = {'hookSpecificOutput': {'hookEventName': 'PreToolUse', 'modifiedToolInput': {'query': modified_query}}}; print(json.dumps(output)); sys.exit(0)\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
   },
   "context": {
     "fileName": [
@@ -47,7 +90,6 @@
       ]
     }
   },
-  "general": {
-    "previewFeatures": true
-  }
+  "alwaysThinkingEnabled": true,
+  "autoCompactEnabled": true
 }
