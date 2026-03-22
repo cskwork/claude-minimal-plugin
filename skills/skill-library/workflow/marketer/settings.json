@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Bash(npm run *)",
+      "Bash(npx *)",
+      "Bash(yt-dlp *)",
+      "mcp__mcp-image__*",
+      "mcp__svgmaker__*"
+    ]
+  },
+  "mcpServers": {
+    "mcp-image": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "mcp-image"],
+      "env": {
+        "GEMINI_API_KEY": "{{GEMINI_API_KEY}}",
+        "IMAGE_OUTPUT_DIR": "{{IMAGE_OUTPUT_DIR}}"
+      }
+    },
+    "svgmaker": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@genwave/svgmaker-mcp"],
+      "env": {
+        "SVGMAKER_API_KEY": "{{SVGMAKER_API_KEY}}"
+      }
+    }
+  }
+}

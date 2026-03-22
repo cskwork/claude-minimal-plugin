@@ -1,0 +1,17 @@
+{
+  "name": "claude-minimal-plugin",
+  "owner": {
+    "name": "cskwork"
+  },
+  "plugins": [
+    {
+      "name": "minimal",
+      "source": "./",
+      "description": "Lightweight essential plugin - core skills only, no external integrations",
+      "version": "2026.03.22",
+      "lastUpdated": "2026-03-22",
+      "category": "onboarding",
+      "keywords": ["minimal", "essentials", "lightweight", "getting-started"]
+    }
+  ]
+}

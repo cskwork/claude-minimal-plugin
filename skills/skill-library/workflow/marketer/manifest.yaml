@@ -1,0 +1,21 @@
+name: marketer
+description: 콘텐츠 마케터 워크플로우 - YouTube 리서치, Excalidraw 시각화, 콘텐츠 제작
+source: library
+version: "1.0"
+
+skills:
+  # 핵심 스킬
+  - planner-youtube-transcript   # YouTube 트랜스크립트 추출
+  - design-excalidraw-diagram    # Excalidraw 다이어그램 생성
+
+  # 보조 스킬
+  - visual-explainer             # HTML 시각 설명 페이지 생성
+  - planner-notebooklm           # NotebookLM 자동화 (팟캐스트 등)
+  - planner-generate-prd         # 콘텐츠 기획서 작성
+
+agents:
+  - content-marketer
+
+mcps:
+  - mcp-image
+  - svgmaker

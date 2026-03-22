@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Bash(npm run *)",
+      "Bash(npx *)",
+      "mcp__figma__*",
+      "mcp__TalkToFigma__*",
+      "mcp__icons8mcp__*",
+      "mcp__svgmaker__*"
+    ]
+  },
+  "mcpServers": {
+    "figma": {
+      "type": "http",
+      "url": "https://mcp.figma.com/mcp"
+    },
+    "icons8mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["mcp-remote", "https://mcp.icons8.com/mcp/"]
+    },
+    "svgmaker": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@genwave/svgmaker-mcp"],
+      "env": {
+        "SVGMAKER_API_KEY": "{{SVGMAKER_API_KEY}}"
+      }
+    }
+  }
+}

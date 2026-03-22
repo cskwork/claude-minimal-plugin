@@ -1,0 +1,18 @@
+{
+  "name": "minimal",
+  "version": "2026.03.22",
+  "description": "Lightweight essential plugin - core skills only, no external integrations",
+  "author": { "name": "cskwork" },
+  "repository": "https://github.com/cskwork/claude-minimal-plugin",
+  "license": "MIT",
+  "keywords": ["minimal", "essentials", "lightweight", "getting-started"],
+  "category": "onboarding",
+  "agents": [
+    "./agents/code-reviewer.md",
+    "./agents/frontend-developer.md",
+    "./agents/feature-tester.md",
+    "./agents/ui-designer.md",
+    "./agents/ux-researcher.md",
+    "./agents/workflow-orchestrator.md"
+  ]
+}

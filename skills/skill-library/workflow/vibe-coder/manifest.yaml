@@ -1,0 +1,29 @@
+name: vibe-coder
+description: Supanova 기반 Vibe Coder 워크플로우 - 프리미엄 랜딩 페이지 및 웹 프로토타입 고속 제작
+source: https://github.com/uxjoseph/supanova-design-skill
+version: "1.0"
+
+skills:
+  # Supanova 핵심 스킬 (uxjoseph/supanova-design-skill에서 추출)
+  - supanova-design-engine       # 코어 디자인 엔진, 섹션 라이브러리, 프리플라이트 체크
+  - supanova-redesign-engine     # 기존 페이지 감사 및 개선
+  - supanova-premium-aesthetic   # 프리미엄 마이크로 미학, 모션 안무, 바이브 아키타입
+  - supanova-full-output         # 완전한 HTML 출력 강제, 잘림 방지
+
+  # 라이브러리 스킬
+  - frontend-design              # 프로덕션급 프론트엔드
+  - visual-explainer             # 시각적 설명 HTML 생성
+  - vercel-deploy                # Vercel 배포
+
+agents:
+  - ui-designer
+  - frontend-developer
+
+mcps:
+  - context7
+  - icons8mcp
+  - svgmaker
+
+commands:
+  - build-fix
+  - commit

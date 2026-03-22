@@ -1,0 +1,37 @@
+name: manager
+description: gstack 기반 매니저 워크플로우 - CEO/엔지니어링/디자인 리뷰, QA, 출시 관리
+source: https://github.com/garrytan/gstack
+version: "1.1"
+
+skills:
+  # gstack 핵심 스킬 (garrytan/gstack에서 추출)
+  - gstack:plan-ceo-review       # CEO/창업자 관점 제품 리뷰
+  - gstack:plan-eng-review       # 엔지니어링 매니저 관점 아키텍처 리뷰
+  - gstack:plan-design-review    # 디자인 감사 (보고서만)
+  - gstack:design-review         # 디자인 감사 + 수정 루프
+  - gstack:qa                    # 전체 QA + 버그 수정
+  - gstack:qa-only               # QA 보고서만 (수정 없음)
+  - gstack:ship                  # 출시 워크플로우
+  - gstack:review                # PR/코드 리뷰
+  - gstack:retro                 # 개발 회고 및 통계
+  - gstack:browse                # 헤드리스 브라우저 QA
+
+  # 라이브러리 스킬
+  - planner-generate-prd
+  - planner-create-issues
+  - planner-plan-feature
+  - planner-analyze-competitors
+  - meeting-notes-converter
+  - jira-ascli
+
+agents:
+  - planner
+  - requirements-architect
+  - gemini-planner
+
+mcps:
+  - vibe_kanban
+
+commands:
+  - plan
+  - make-jira-issue

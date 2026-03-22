@@ -1,0 +1,31 @@
+name: designer
+description: Impeccable 기반 디자이너 워크플로우 - 7대 디자인 도메인, 20개 명령어, 안티패턴 가이드
+source: https://github.com/pbakaus/impeccable
+version: "1.0"
+
+skills:
+  # Impeccable 핵심 스킬 (pbakaus/impeccable에서 추출)
+  - impeccable:frontend-design    # 7개 참조 파일 포함 디자인 스킬
+
+  # 라이브러리 스킬
+  - frontend-design
+  - design-interface
+  - design-excalidraw-diagram
+  - design-multiplier
+  - visual-explainer
+
+agents:
+  - ui-designer
+  - frontend-developer
+
+mcps:
+  - figma
+  - icons8mcp
+  - svgmaker
+
+commands:
+  - interface-design:init
+  - interface-design:critique
+  - interface-design:audit
+  - interface-design:extract
+  - interface-design:status

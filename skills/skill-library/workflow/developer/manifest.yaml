@@ -1,0 +1,43 @@
+name: developer
+description: Superpowers 기반 개발자 워크플로우 - TDD, 체계적 디버깅, 브레인스토밍, 계획, 코드 리뷰
+source: https://github.com/obra/superpowers
+version: "5.0"
+
+skills:
+  # Superpowers 핵심 스킬 (obra/superpowers에서 추출)
+  - superpowers:brainstorming
+  - superpowers:writing-plans
+  - superpowers:executing-plans
+  - superpowers:test-driven-development
+  - superpowers:systematic-debugging
+  - superpowers:verification-before-completion
+  - superpowers:requesting-code-review
+  - superpowers:receiving-code-review
+  - superpowers:subagent-driven-development
+  - superpowers:dispatching-parallel-agents
+  - superpowers:using-git-worktrees
+  - superpowers:finishing-a-development-branch
+  - superpowers:writing-skills
+  - superpowers:using-superpowers
+
+  # 라이브러리 스킬
+  - commit
+  - feature-dev
+  - security-review
+  - subagent-driven-development
+
+agents:
+  - code-reviewer
+
+mcps:
+  - context7
+
+commands:
+  - commit
+  - build-fix
+  - code-review
+  - tdd
+  - plan
+  - feature-dev
+  - refactor-clean
+  - test-coverage

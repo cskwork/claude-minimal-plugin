@@ -1,0 +1,117 @@
+default_dirs:
+  skills:
+    - default: .claude/skills/
+    - global: ~/.claude/skills/
+    - codex_global: ~/.codex/skills/
+    - gemini_global: ~/.gemini/skills/
+    - gsd_global: ~/.gsd/agent/skills/
+  agents:
+    - default: .claude/agents/
+    - global: ~/.claude/agents/
+  prompts:
+    - default: .claude/commands/
+    - global: ~/.claude/commands/
+  tools:
+    - default: .claude/tool-cli/
+    - global: ~/.claude/tool-cli/
+
+library:
+  skills:
+    - name: agent-browser
+      description: Browser automation CLI for AI agents
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/skills/agent-browser/SKILL.md
+      scope: global
+
+    - name: brutalist-skill
+      description: Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/skills/brutalist-skill/SKILL.md
+      scope: global
+
+    - name: claude-hud
+      description: Claude Code statusline HUD plugin for context usage, tool activity, agent tracking
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/skills/claude-hud/SKILL.md
+      scope: global
+
+    - name: find-skills
+      description: Discover and install agent skills from the public ecosystem
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/skills/find-skills/SKILL.md
+      scope: global
+
+    - name: install-plugins
+      description: Plugin marketplace installation guide and troubleshooting
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/skills/install-plugins/SKILL.md
+      scope: global
+
+    - name: korean-frontend-defaults
+      description: Korean market frontend localization overrides (Pretendard font, word-break keep-all)
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/skills/korean-frontend-defaults/SKILL.md
+      scope: global
+
+    - name: mcp-builder
+      description: Guide for creating MCP servers to integrate external APIs or services
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/skills/mcp-builder/SKILL.md
+      scope: global
+
+    - name: minimalist-skill
+      description: Clean editorial-style interfaces with warm monochrome palette and typographic contrast
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/skills/minimalist-skill/SKILL.md
+      scope: global
+
+    - name: output-skill
+      description: Enforces complete code generation, bans placeholder patterns
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/skills/output-skill/SKILL.md
+      scope: global
+
+    - name: redesign-skill
+      description: Upgrades existing websites and apps to premium design quality
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/skills/redesign-skill/SKILL.md
+      scope: global
+
+    - name: skill-creator
+      description: Guide for creating effective skills that extend Claude capabilities
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/skills/skill-creator/SKILL.md
+      scope: global
+
+    - name: soft-skill
+      description: High-end agency design patterns - fonts, spacing, shadows, animations
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/skills/soft-skill/SKILL.md
+      scope: global
+
+    - name: stitch-skill
+      description: Semantic Design System Skill for Google Stitch with premium UI standards
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/skills/stitch-skill/SKILL.md
+      scope: global
+
+    - name: taste-skill
+      description: Senior UI/UX Engineer skill overriding default LLM biases in interface design
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/skills/taste-skill/SKILL.md
+      scope: global
+
+  agents:
+    - name: code-reviewer
+      description: Code review agent for quality, security, and performance
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/agents/code-reviewer.md
+
+    - name: frontend-developer
+      description: Expert UI engineer for robust, scalable frontend solutions
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/agents/frontend-developer.md
+
+    - name: feature-tester
+      description: Comprehensive testing agent for new features and changes
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/agents/feature-tester.md
+
+    - name: ui-designer
+      description: Expert UI designer for visual design systems and component libraries
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/agents/ui-designer.md
+
+    - name: ux-researcher
+      description: Expert UX researcher for user insights and usability testing
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/agents/ux-researcher.md
+
+    - name: workflow-orchestrator
+      description: Expert workflow orchestrator for process design and automation
+      source: https://github.com/cskwork/claude-minimal-plugin/blob/main/agents/workflow-orchestrator.md
+
+  prompts: []
+  tools: []
+  mcps: []
