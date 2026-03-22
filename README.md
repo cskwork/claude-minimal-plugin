@@ -34,6 +34,12 @@ The included `CLAUDE.md` provides a battle-tested system prompt. Install it to `
 cp CLAUDE.md ~/.claude/CLAUDE.md
 ```
 
+## Recommended Plugins
+
+| Plugin | Description | Install |
+|--------|-------------|---------|
+| [superpowers](https://github.com/obra/superpowers) | Agentic skills framework -- TDD, systematic debugging, plan writing, code review workflows | `claude install-github-skill https://github.com/obra/superpowers` |
+
 ## What's Included
 
 | Type | Count | Items |
