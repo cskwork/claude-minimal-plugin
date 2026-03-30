@@ -1,0 +1,32 @@
+name: Bug Report
+description: Report an issue with installation or a skill/agent/command
+labels: ["bug"]
+body:
+  - type: input
+    id: component
+    attributes:
+      label: Component
+      placeholder: e.g. "install.sh", "taste-skill", "/tdd command"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened
+      placeholder: Describe the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: What should have happened instead.
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: e.g. "macOS 15.3", "Ubuntu 24.04"
+    validations:
+      required: true

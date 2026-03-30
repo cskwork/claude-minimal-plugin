@@ -1,0 +1,44 @@
+name: Skill Request
+description: Suggest a skill, agent, or command for the collection
+labels: ["enhancement"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: e.g. "accessibility-checker"
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Skill
+        - Agent
+        - Command
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What it does
+      placeholder: One sentence describing the functionality.
+    validations:
+      required: true
+  - type: textarea
+    id: justification
+    attributes:
+      label: Why it belongs in a minimal collection
+      placeholder: Explain why this is essential, not just nice-to-have.
+    validations:
+      required: true
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Requirements check
+      options:
+        - label: No external API keys or service accounts required
+          required: true
+        - label: Does not duplicate existing functionality
+          required: true

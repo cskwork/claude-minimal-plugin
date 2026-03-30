@@ -156,15 +156,10 @@ These were deliberately removed to keep the plugin dependency-free:
 ## Uninstall
 
 ```bash
-# Remove symlinks (originals in the cloned repo are untouched)
-rm -rf ~/.claude/skills/{agent-browser,brutalist-skill,claude-hud,find-skills,install-plugins,korean-frontend-defaults,mcp-builder,minimalist-skill,output-skill,redesign-skill,skill-creator,skill-library,soft-skill,stitch-skill,taste-skill}
-rm -f ~/.claude/agents/{code-reviewer,feature-tester,frontend-developer,ui-designer,ux-researcher,workflow-orchestrator}.md
-rm -f ~/.claude/commands/{build-fix,plan,tdd}.md
-
-# Restore backups (if any)
-[ -f ~/.claude/CLAUDE.md.bak ] && mv ~/.claude/CLAUDE.md.bak ~/.claude/CLAUDE.md
-[ -f ~/.claude/settings.json.bak ] && mv ~/.claude/settings.json.bak ~/.claude/settings.json
+./uninstall.sh
 ```
+
+Removes all symlinks and restores your backed-up config files.
 
 ## Contributing
 
