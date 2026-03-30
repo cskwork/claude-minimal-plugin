@@ -1,12 +1,12 @@
 {
   "name": "minimal",
   "version": "2026.03.22",
-  "description": "Lightweight essential plugin - core skills only, no external integrations",
+  "description": "Curated web dev toolkit: 15 design & dev skills, 6 specialized agents, TDD workflow. Zero dependencies.",
   "author": { "name": "cskwork" },
   "repository": "https://github.com/cskwork/claude-minimal-plugin",
   "license": "MIT",
-  "keywords": ["minimal", "essentials", "lightweight", "getting-started"],
-  "category": "onboarding",
+  "keywords": ["minimal", "essentials", "web-development", "frontend", "design-system", "tdd", "ai-agents", "curated"],
+  "category": "development",
   "agents": [
     "./agents/code-reviewer.md",
     "./agents/frontend-developer.md",

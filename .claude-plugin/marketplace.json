@@ -7,11 +7,11 @@
     {
       "name": "minimal",
       "source": "./",
-      "description": "Lightweight essential plugin - core skills only, no external integrations",
-      "version": "2026.03.22",
-      "lastUpdated": "2026-03-22",
-      "category": "onboarding",
-      "keywords": ["minimal", "essentials", "lightweight", "getting-started"]
+      "description": "Curated web dev toolkit: 15 design & dev skills, 6 specialized agents, TDD workflow. Zero dependencies.",
+      "version": "2026.03.30",
+      "lastUpdated": "2026-03-30",
+      "category": "development",
+      "keywords": ["minimal", "essentials", "web-development", "frontend", "design-system", "tdd", "ai-agents", "curated"]
     }
   ]
 }
